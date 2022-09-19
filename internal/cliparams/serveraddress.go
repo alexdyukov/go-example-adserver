@@ -1,4 +1,4 @@
-package main
+package cliparams
 
 import (
 	"errors"

@@ -10,11 +10,10 @@ import (
 
 //easyjson:json
 type response struct {
-	ID    int64 `json:"id"`
 	Price int64 `json:"price"`
 }
 
-func New(serverID, responseWindow, priceWindow int64) http.Handler {
+func New(responseWindow, priceWindow int64) http.Handler {
 	bigPriceWindow := big.NewInt(priceWindow)
 	bigResponseWindow := big.NewInt(responseWindow)
 
@@ -32,7 +31,6 @@ func New(serverID, responseWindow, priceWindow int64) http.Handler {
 		}
 
 		res := response{
-			ID:    serverID,
 			Price: price.Int64(),
 		}
 

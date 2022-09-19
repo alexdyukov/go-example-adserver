@@ -11,7 +11,7 @@ import (
 func main() {
 	conf := GetCreativeConfig()
 
-	handler := creativehandler.New(conf.IDToRedirect, conf.ResponseWindow, conf.PriceWindow)
+	handler := creativehandler.New(conf.ResponseWindow.Int64(), conf.PriceWindow.Int64())
 
 	server := &http.Server{
 		Addr:              conf.ServerAddress.String(),

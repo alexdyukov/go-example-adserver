@@ -36,8 +36,6 @@ func easyjsonCac2280fDecodeGithubComAlexdyukovGoExampleAdserverInternalCreativeh
 			continue
 		}
 		switch key {
-		case "id":
-			out.ID = int64(in.Int64())
 		case "price":
 			out.Price = int64(in.Int64())
 		default:
@@ -55,13 +53,8 @@ func easyjsonCac2280fEncodeGithubComAlexdyukovGoExampleAdserverInternalCreativeh
 	first := true
 	_ = first
 	{
-		const prefix string = ",\"id\":"
-		out.RawString(prefix[1:])
-		out.Int64(int64(in.ID))
-	}
-	{
 		const prefix string = ",\"price\":"
-		out.RawString(prefix)
+		out.RawString(prefix[1:])
 		out.Int64(int64(in.Price))
 	}
 	out.RawByte('}')
