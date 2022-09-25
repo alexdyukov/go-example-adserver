@@ -10,3 +10,5 @@ require (
 require github.com/josharian/intern v1.0.0 // indirect
 
 replace github.com/alexdyukov/go-example-adserver/internal/creativehandler => ./internal/creativehandler
+replace github.com/alexdyukov/go-example-adserver/internal/cliparams => ./internal/cliparams
+

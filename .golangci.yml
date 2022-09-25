@@ -62,6 +62,7 @@ linters-settings:
     ignored-numbers:
       - '10'
       - '2'
+      - '64'
   gomoddirectives:
     replace-local: true
   gosec:
